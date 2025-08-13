@@ -8,7 +8,7 @@ CLIENT_ID = "SAS-CLIENT1"
 CLIENT_SECRET = "Hhtg74iYYZY1nSJUvDBxKntGqfigem6yKyYw9rlb2qSXyhEEs8BZEtw27KsIE1UI"
 REDIRECT_URL = "http://127.0.0.1:65015"
 BASE_URL = "https://api.stocko.in"
-ACCESS_TOKEN = "IU-u3gLeh4fh4dQbsQ9nzZxI-X6u9gPGMczoSeiblZA.yDdTfo-9GXYQnBcjr--ucyAiT_6S69pwIaUXCzHJiJs"  # <-- put your live token here
+ACCESS_TOKEN = ""  # <-- put your live token here
 
 # === Connect ===
 conn = Connect(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL, BASE_URL)
@@ -33,4 +33,5 @@ strategy_thread = None
 SOCKET_RETRY_BASE = 1.0
 SOCKET_RETRY_MAX = 30.0
 CHECK_INTERVAL = 5.0
+
 
