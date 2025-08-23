@@ -20,7 +20,7 @@ def place_order(client, symbol_token, qty,):
     }
 
     try:
-        response = client.place_orde(order_payload)
+        response = client.place_order(order_payload)
         print(f"✅ Order Placed: {response}")
         return response.get("order_id", "UNKNOWN")
     except Exception as e:

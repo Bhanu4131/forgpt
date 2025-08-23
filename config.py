@@ -1,21 +1,21 @@
 # config.py
 from threading import Lock, Event
 from pyoauthbridge import Connect
-from utils.strategy_state import StrategyState
+from services.strategy_state import StrategyState
 
 # === SAS API Credentials ===
 CLIENT_ID = "SAS-CLIENT1"
 CLIENT_SECRET = "Hhtg74iYYZY1nSJUvDBxKntGqfigem6yKyYw9rlb2qSXyhEEs8BZEtw27KsIE1UI"
 REDIRECT_URL = "http://127.0.0.1:65015"
 BASE_URL = "https://api.stocko.in"
-ACCESS_TOKEN = ""  # <-- put your live token here
+ACCESS_TOKEN = "_2wsSNG2y-ItC1xTmgL2qY6JhpRNnhucU2pQI9RbIJk.6waSg5YYU7ARfMbS8YdWqaBhkiatexZnUbzJug28AB4"  # <-- put your live token here
 
 # === Connect ===
 conn = Connect(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL, BASE_URL)
 conn.set_access_token(ACCESS_TOKEN)
 
 # === Symbol to trade ===
-symbol_token = {'exchangeCode': 2, 'instrumentToken': 47100}  # Example: NIFTY
+symbol_token = {'exchangeCode': 2, 'instrumentToken': 71974}  # Example: NIFTY
 
 # === Strategy state ===
 strategy_state = StrategyState.load("strategy_state.json")
@@ -33,5 +33,4 @@ strategy_thread = None
 SOCKET_RETRY_BASE = 1.0
 SOCKET_RETRY_MAX = 30.0
 CHECK_INTERVAL = 5.0
-
 
